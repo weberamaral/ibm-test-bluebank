@@ -1,0 +1,4 @@
+export default {
+  TYPES: { TRANSFER: 'TRANSFER', RETIRE: 'RETIRE', ADD: 'ADD' },
+  STATUS: { PENDING: 'PENDING', ABORTED: 'ABORTED', OK: 'OK' }
+};

@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>{{::vm.title}}</h1>
+
+  <div class="row">
+
+    <div class="col-md-12">
+      <h3>Conta de origem</h3>
+      <form>
+        <div class="row">
+          <div class="form-group col-sm-4">
+            <label for="exampleInputAgency">Agencia</label>
+            <input disabled data-ng-model="::vm.fromAccount.agency" type="text" class="form-control" id="exampleInputAgency" placeholder="Agencia">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="exampleInputNumber">Número</label>
+            <input disabled data-ng-model="::vm.fromAccount.number" type="text" class="form-control" id="exampleInputNumber" placeholder="Número">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="exampleInputAmount">Saldo atual (em reais)</label>
+            <div class="input-group">
+              <div class="input-group-addon">R$</div>
+              <input disabled data-ng-model="::vm.fromAccount.balance" type="text" class="form-control" id="exampleInputAmount" placeholder="Saldo atual">
+              <div class="input-group-addon">,00</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-12">
+      <h3>Conta de destino</h3>
+      <form name="transferForm">
+        <div class="row">
+          <div class="form-group col-sm-4">
+            <label for="exampleInputAgency1">Agencia de destino</label>
+            <input required type="text" data-ng-model="vm.toAccountData.toAccountAgency" class="form-control" id="exampleInputAgency1" placeholder="Agencia de destino">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="exampleInputNumber1">Número da conta</label>
+            <input required type="text" data-ng-model="vm.toAccountData.toAccountNumber" class="form-control" id="exampleInputNumber1" placeholder="Número da conta">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="exampleInputAmount">Valor de transferencia (em reais)</label>
+            <div class="input-group">
+              <div class="input-group-addon">R$</div>
+              <input required min="0" type="number" data-ng-model="vm.toAccountData.value" class="form-control" id="exampleInputAmount" placeholder="Valor de transferencia">
+              <div class="input-group-addon">,00</div>
+            </div>
+          </div>
+        </div>
+        <button data-ng-click="vm.transfer()" data-ng-disabled="transferForm.$invalid" type="submit" class="btn btn-primary">Transferir</button>
+      </form>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>{{::vm.title}}</h1>
+
+  {{vm.json}}
+
+  <table class="table">
+    <caption>Listagem de contas</caption>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Agencia</th>
+        <th>Número</th>
+        <th>Saldo</th>
+        <th>Transações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="account in vm.accounts track by $index">
+        <th>{{$index + 1}}</th>
+        <td>{{::account.agency}}</td>
+        <td>{{::account.number}}</td>
+        <td>{{::account.balance}}</td>
+        <td><a href="/contas/{{::account.id}}">Transferir</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
