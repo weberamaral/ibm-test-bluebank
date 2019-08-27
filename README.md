@@ -1,5 +1,7 @@
 # ibm-test-bluebank
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/weberamaral/ibm-test-bluebank.svg)](https://greenkeeper.io/)
+
 ### Backend `ibm-test-bluebank-api`
 
 * NodeJS
