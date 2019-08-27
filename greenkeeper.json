@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "ibm-test-bluebank-api/package.json",
+        "ibm-test-bluebank-frontend/package.json"
+      ]
+    }
+  }
+}
